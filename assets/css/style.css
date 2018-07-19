@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto');
+
+html{
+	box-sizing: border-box;
+	font:normal 100%/1.5;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, figure, 
+blockquote, hr, table{
+	margin: 0 0 1.5rem 0;	
+}
+
+p,
+a,
+li{
+    font-family: 'Roboto', sans-serif;
+    color: #221f1f;
+}
+
+h1, h2, h3, h4, h5, h6{
+    /* text-align: center; */
+    font-family: 'Playfair Display', serif;
+    color: #3b3a3a;
+}
+
+.center{
+    text-align: center;
+}
+
+.code{
+    font-family: 'Courier New', Courier, monospace;
+    color: #221f1f;
+}
+
+.stabillo{
+    background-color: rgb(23, 180, 167);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+/* major Third */
+
+h1{
+	font-size: 3.051rem;
+}
+
+h2{
+	font-size: 2.441rem;
+}
+
+h3{
+	font-size: 1.953rem;
+}
+
+h4{
+	font-size: 1.563rem;
+}
+
+h5{
+	font-size: 1.25rem;
+}
+
+h6{
+	font-size: 1rem
+}
+
+/* 
+    #############
+       TEMPLATE 
+    #############
+*/
+
+/* header */
+
+
+header{
+    padding: 2rem;
+    text-align: center;
+}
+
+@media only screen and (max-width:425px){
+    header{
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .header-description{
+        margin-top: 2.5rem;
+        padding: 0.5rem;
+        
+    }
+    .header-description .title{
+        font-size: 2rem;
+    }
+
+    .header-description .code{
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+/* navigation */
+
+.btn-toggle{
+    display: none;
+}
+
+nav{
+    border-top: 0.01rem solid rgb(23, 180, 167);
+    border-bottom: 0.01rem solid rgb(23, 180, 167);
+    background-color: white;
+}
+
+nav ul{
+    width: 100%;
+    max-width: 80%;
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li:last-child{
+    float: right;
+}
+
+nav ul li a{
+    display: inline-block;
+    padding: 0.7rem;
+    margin: 1.01rem 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(58, 56, 56);
+    /* border-bottom: 0.1rem solid rgb(23, 180, 167); */
+    
+}
+
+@media only screen and (max-width:425px){
+
+    .btn-toggle{
+        display: block;
+        width: 100%;
+        background-color: rgb(23, 180, 167);
+        overflow: hidden;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .btn-toggle a{
+        float: right;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 1rem;
+    }
+
+    nav ul{
+        max-width: 90%;
+    }
+
+    nav ul li,
+    nav ul li:last-child{
+        float: none;
+    }
+
+    nav ul li a{
+        display: block;
+    }
+}
+
+nav ul li a:hover{
+    background-color:rgb(23, 180, 167);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.active{
+    background-color:rgb(23, 180, 167);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.wraper{
+    position: absolute;
+    right: 1rem;
+    top:1.5rem;
+    display: block;
+}
+
+.wraper .btn-login,
+.wraper .btn-logout{
+    display: inline-block;
+}
+
+.wraper .btn-login a,
+.wraper .btn-logout a{
+    color: rgb(23, 180, 167);
+    text-decoration: none;
+    padding: 0.7rem;
+    margin: 0.5rem;
+    border: 0.09rem solid rgb(23, 180, 167);
+    border-radius: 0.8rem;
+}
+
+.wraper .btn-login a:hover,
+.wraper .btn-logout a:hover{
+    color: white;
+    background-color: rgb(23, 180, 167);
+}
+
+.create-post {
+    position: absolute;
+    display: block;
+    top: 1.5rem;
+    left: 1rem;
+}
+
+.create-post a{
+    background-color: rgb(23, 180, 167);
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem;
+    margin: 0.5rem;
+    border: 0.09rem solid rgb(23, 180, 167);
+    border-radius: 0.8rem;
+}
+
+.create-post a:hover{
+    background-color: rgb(11, 133, 123);
+    border: 0.09rem solid rgb(11, 133, 123);
+}
+
+/* 
+    container
+*/
+
+.container{
+    width: 100%;
+    max-width: 75%;
+    margin: 5rem auto;
+    display: block;
+}
+
+@media only screen and (max-width:425px){
+    .container{
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .container{
+        max-width: 95%;
+    }
+}
+
+.js-nav{
+	display: block;
+}
+
+
+
+
+
+/* 
+    ===================
+        FORM 
+    ===================
+*/
+
+/* form search */
+
+.form-container{
+    width: 100%;
+    max-width: 65%;
+    margin: auto;
+    display: block;
+}
+
+.form-search{
+    display: block;
+    width: 60%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.input-search{
+    width: 100%;
+    max-width: 80%;
+    display: inline-block;
+    float: left;
+
+}
+
+.btn-search{
+    width: 100%;
+    max-width: 20%;
+    display: inline-block;
+    color: white;
+    background-color: rgb(23, 180, 167);
+}
+
+.btn-search:hover{
+    cursor: pointer;
+}
+
+.input-search,
+.btn-search{
+    padding: 1rem;
+    border: 0.01rem solid rgb(23, 180, 167);
+    
+}
+
+@media only screen and (max-width:425px){
+
+    .form-container{
+        max-width: 90%;
+    }
+
+    .btn-search{
+        padding: 1rem 0;
+    }
+
+    .form-search{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .form-container{
+        max-width: 85%;
+    }
+}
+
+/* form login */
+
+.form-login{
+    width: 100%;
+    max-width: 55%;
+    display: block;
+    margin: auto;
+}
+
+.form-login input{
+    width: 100%;
+    padding: 1rem 0.4rem;
+    margin: 0.5rem 0;
+    border: 0.01rem solid rgb(23, 180, 167);
+}
+
+.form-login input[type="submit"]{
+    width: 102%;
+    border: 0.01rem solid rgb(23, 180, 167);
+    background-color: rgb(23, 180, 167);
+    color: white;
+}
+
+.form-login input[type="submit"]:hover{
+    font-weight: bolder;
+}
+
+/* form login */
+
+.form-group label{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #3b3a3a;
+}
+
+.form-create{
+    display: block;
+    margin: auto;
+}
+
+.form-group{
+    width: 100%;
+    max-width: 80%;
+    margin: 0.5rem auto;
+}
+
+
+.form-group input{
+    width: 100%;
+    padding: 0.6rem 0.2rem;
+    margin: 0.2rem auto;
+}
+
+.form-group input[type="submit"]{
+    border: 0.01rem solid rgb(23, 180, 167);
+    background-color: rgb(23, 180, 167);
+    color: white;
+    width: 101%;
+}
+
+.form-group input[type="submit"]:hover{
+    font-weight: bolder;
+}
+
+.form-group input,
+.form-group textarea{
+    border: 0.01rem solid rgb(175, 175, 175);
+}
+
+/* 
+    error
+*/
+
+.error {
+    
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 70%;
+}
+
+.error ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.error ul li{
+    background-color: rgb(252, 210, 207);
+    text-align: center;
+    color: rgb(241, 63, 63);
+    display: block;
+    padding: 0.5rem 0.5rem;
+    margin: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+/* 
+    sidebar Tag
+*/
+
+.sidebar-tag{
+    width: 100%;
+    max-width: 25%;
+    float: right;
+}
+
+@media only screen and (max-width:425px){
+    .sidebar-tag{
+        display: none;
+    }
+}
+
+.sidebar-tag ol{
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+.sidebar-tag ol li{
+    display: inline-block;
+    margin: 0.8rem 0.4rem;
+    
+}
+
+.sidebar-tag ol li a{
+    text-decoration: none;
+    color:white;
+    background-color: rgb(23, 180, 167);
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+}
+
+.sidebar-tag ol li a:hover{
+    text-decoration: underline;
+}
+
+/* 
+    section
+*/
+
+.post-title{
+    display: block;
+    width: 100%;
+    max-width: 75%;
+}
+
+
+.wraper .btn-update,
+.wraper .btn-delete{
+    display: inline-block;
+}
+
+.wraper .btn-update a,
+.wraper .btn-delete a{
+    text-decoration: none;
+    color: rgb(23, 180, 167);
+    border: 0.08rem solid rgb(23, 180, 167);
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    background-color: white;
+}
+
+.wraper .btn-update a:hover,
+.wraper .btn-delete a:hover{
+    color: white;
+    background-color: rgb(23, 180, 167);
+}
+
+
+.date{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.section{
+    width: 100%;
+    max-width: 70%;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.section label a:hover{
+    color: rgb(23, 180, 167);
+}
+
+.section label,
+.section label a{
+    font-style: italic;
+    color: #504d4d;
+}
+
+.btn-readmore{
+    margin-bottom: 3rem;
+}
+
+.btn-readmore .readM a{
+    color: #3b3a3a;
+    text-decoration: none;
+}
+
+.btn-readmore .readM{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #646363;
+}
+
+.btn-readmore .readM a:hover{
+    color: rgb(23, 180, 167);
+}
+
+.btn-readmore .readM:hover{
+    border-bottom: 1px solid rgb(23, 180, 167);
+}
+
+.batas-list{
+    border-bottom: 0.01rem solid rgb(23, 180, 167);
+    width: 100%;
+    max-width: 85%;
+    display: block;
+    margin: auto;
+}
+
+@media only screen and (max-width:425px){
+    .section{
+        max-width: 100%;
+    }
+
+    .post-title h1{
+        max-width: 100%;
+        font-size: 2.2rem;
+    }
+
+    .post-title{
+        max-width: 100%;
+    }
+}
+
+
+/* 
+    pagination
+
+*/
+
+.pagin-group ol{
+    list-style-type: none;
+    display: block;
+    text-align: center;
+}
+
+.pagin-group ol li{
+    display: inline-block;
+}
+
+.pagin-group ol li a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgb(23, 180, 167);
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.4rem;
+}
+
+.pagin-group ol li a:hover{
+    background-color: rgb(49, 235, 219);
+}
+
+/* 
+    footer
+*/
+
+footer{
+    background-color: rgb(23, 180, 167);
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    clear: both;
+}
+
+footer h6{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.scrolltop{
+    background-color: rgb(23, 180, 167);
+    padding: 0.8rem 1rem;
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 3rem;   
+}
+
+.scrolltop a{
+    color: white;
+    text-decoration:none;
+    /* font-weight: bolder; */
+}
